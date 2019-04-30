@@ -7,8 +7,7 @@ class SearchBar extends Component {
   // ensures the function is automatically bound to `this`
   onFormSubmit = event => {
     event.preventDefault();
-
-    console.log(this.state.term);
+    this.props.onSubmit(this.state.term);
   };
 
   render() {
